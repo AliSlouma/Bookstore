@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<AnchorPane prefHeight="408.0" prefWidth="566.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="OrdersController">
+    <children>
+        <Button layoutX="60.0" layoutY="325.0" mnemonicParsing="false" onAction="#onRefreshClick" prefHeight="26.0" prefWidth="128.0" text="Refresh" />
+        <TableView fx:id="ordersTable" layoutX="34.0" layoutY="33.0" prefHeight="275.0" prefWidth="510.0">
+            <columns>
+                <TableColumn fx:id="orderNumCol" editable="false" prefWidth="118.39999103546143" resizable="false" text="Order Number" />
+                <TableColumn fx:id="isbnCol" editable="false" prefWidth="126.0" resizable="false" text="ISBN" />
+                <TableColumn fx:id="dateoutCol" editable="false" prefWidth="126.0" resizable="false" text="date Out" />
+                <TableColumn fx:id="quantityCol" editable="false" prefWidth="137.0" resizable="false" text="quantity Ordered" />
+            </columns>
+        </TableView>
+        <Button layoutX="196.0" layoutY="325.0" mnemonicParsing="false" onAction="#onConfirmClick" prefHeight="31.0" prefWidth="101.0" text="Confirm" />
+        <Button layoutX="305.0" layoutY="325.0" mnemonicParsing="false" onAction="#onConfirmAllClick" prefHeight="31.0" prefWidth="95.0" text="Confirm All" />
+        <Button layoutX="410.0" layoutY="325.0" mnemonicParsing="false" onAction="#onAddOrderClick" prefHeight="31.0" prefWidth="95.0" text="Add Order" />
+        <Button fx:id="close" layoutX="267.0" layoutY="363.0" mnemonicParsing="false" onAction="#onCloseClick" text="Close" />
+
+    </children>
+</AnchorPane>

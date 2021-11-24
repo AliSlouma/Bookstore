@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.collections.*?>
+<?import java.lang.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.collections.FXCollections?>
+
+<AnchorPane prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AddBookWindowController">
+   <children>
+      <Label fx:id="windowTitle" layoutX="323.0" layoutY="36.0" text="New Book">
+         <font>
+            <Font size="34.0" />
+         </font>
+      </Label>
+      <TextField id="isbn" fx:id="isbn" layoutX="106.0" layoutY="100.0" />
+      <Label layoutX="35.0" layoutY="101.0" prefHeight="31.0" prefWidth="53.0" text="-ISBN" />
+      <Label layoutX="308.0" layoutY="91.0" prefHeight="50.0" prefWidth="69.0" text="-Selling Price" textAlignment="CENTER" wrapText="true" />
+      <TextField fx:id="sellingprice" layoutX="388.0" layoutY="100.0" />
+      <Label layoutX="14.0" layoutY="238.0" prefHeight="50.0" prefWidth="94.0" text="-Publication Year" textAlignment="CENTER" textOverrun="CLIP" wrapText="true" />
+      <TextField fx:id="publicationyear" layoutX="106.0" layoutY="247.0" />
+      <Label layoutX="27.0" layoutY="185.0" prefHeight="50.0" prefWidth="69.0" text="-PublisherName" textAlignment="CENTER" wrapText="true" />
+      <TextField fx:id="publishername" layoutX="106.0" layoutY="193.0" />
+      <Label layoutX="35.0" layoutY="146.0" prefHeight="31.0" prefWidth="53.0" text="-Title" />
+      <TextField fx:id="bookTitle" layoutX="106.0" layoutY="146.0" />
+      <Label layoutX="305.0" layoutY="247.0" prefHeight="31.0" prefWidth="69.0" text="-Category" />
+      <TextField fx:id="numberofcopies" layoutX="388.0" layoutY="194.0" />
+      <Label layoutX="308.0" layoutY="185.0" prefHeight="50.0" prefWidth="69.0" text="-Number Of Copies" textAlignment="CENTER" wrapText="true" />
+      <TextField fx:id="threshold" layoutX="388.0" layoutY="146.0" />
+      <Label layoutX="305.0" layoutY="146.0" prefHeight="31.0" prefWidth="75.0" text="-Threshold" textAlignment="CENTER" wrapText="true" />
+      <Button fx:id="finish" layoutX="314.0" layoutY="324.0" mnemonicParsing="false" onAction="#onFinishClick" text="Finish" />
+      <Button fx:id="cancel" layoutX="400.0" layoutY="324.0" mnemonicParsing="false" onAction="#onCancelClick" text="Cancel" />
+      <TableView fx:id="authors" editable="true" layoutX="586.0" layoutY="88.0" prefHeight="189.0" prefWidth="167.0">
+        <columns>
+          <TableColumn fx:id="authorsCol" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="161.0" resizable="false" text="Authors" />
+        </columns>
+      </TableView>
+      <ComboBox fx:id="category" layoutX="386.0" layoutY="247.0" prefHeight="31.0" prefWidth="187.0">
+         <items>
+            <FXCollections fx:factory="observableArrayList">
+               <String fx:id="art" fx:value="Art" />
+               <String fx:id="science" fx:value="Science" />
+               <String fx:id="religion" fx:value="Religion" />
+               <String fx:id="history" fx:value="History" />
+               <String fx:id="geography" fx:value="Geography" />
+            </FXCollections>
+         </items>
+      </ComboBox>
+      <Button id="addauthor" layoutX="755.0" layoutY="86.0" mnemonicParsing="false" onAction="#onAddAuthorAction" text="+" />
+      <Button id="deleteauthor" layoutX="755.0" layoutY="117.0" mnemonicParsing="false" onAction="#onDeleteAuthorAction" prefHeight="31.0" prefWidth="31.0" text="-" />
+
+   </children>
+</AnchorPane>

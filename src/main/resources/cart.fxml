@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16"
+            fx:controller="CartController">
+    <children>
+        <Label layoutX="14.0" layoutY="5.0" prefHeight="31.0" prefWidth="151.0" text="Shopping Card">
+            <font>
+                <Font size="21.0"/>
+            </font>
+        </Label>
+        <TableView fx:id="userBooks" layoutX="14.0" layoutY="82.0" prefHeight="275.0" prefWidth="821.0">
+            <columns>
+                <TableColumn fx:id="ISBNCol" editable="false" prefWidth="118.39999103546143" resizable="false"
+                             text="ISBN"/>
+                <TableColumn fx:id="titleCol" editable="false" prefWidth="122.39997863769531" resizable="false"
+                             text="Title"/>
+                <TableColumn fx:id="publisherCol" editable="false" prefWidth="122.39997863769531" resizable="false"
+                             text="Publisher"/>
+               <TableColumn fx:id="yearCol" editable="false" prefWidth="96.0" resizable="false" text="Year" />
+               <TableColumn fx:id="priceCol" editable="false" prefWidth="97.59991455078125" resizable="false" text="Price" />
+               <TableColumn fx:id="categoryCol" editable="false" prefWidth="136.800048828125" resizable="false" text="Category" />
+               <TableColumn fx:id="copiesCol" editable="false" prefWidth="121.5999755859375" resizable="false" text="Copies" />
+           </columns>
+       </TableView>
+      <Label layoutX="356.0" layoutY="28.0" text="Your Books">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <Button layoutX="14.0" layoutY="365.0" mnemonicParsing="false" onAction="#DeleteOrder" prefHeight="26.0" prefWidth="101.0" text="Delete" />
+      <Label layoutX="719.0" layoutY="13.0" prefHeight="18.0" prefWidth="102.0" text="Total Price">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="price" layoutX="750.0" layoutY="43.0" text="Label" textAlignment="CENTER">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+        <Button layoutX="125.0" layoutY="366.0" mnemonicParsing="false" onAction="#checkout" prefHeight="26.0"
+                prefWidth="102.0" text="Checkout"/>
+   </children>
+</AnchorPane>

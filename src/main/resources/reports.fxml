@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="420.0" prefWidth="629.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ReportsController">
+   <children>
+      <TableView fx:id="customers" layoutX="26.0" layoutY="125.0" prefHeight="259.0" prefWidth="271.0">
+        <columns>
+            <TableColumn fx:id="userName" editable="false" prefWidth="134.4000244140625" resizable="false" text="Name" />
+            <TableColumn fx:id="noOFBooks" editable="false" prefWidth="134.39996337890625" resizable="false" text="Total Purchased" />
+
+        </columns>
+      </TableView>
+      <TableView fx:id="topBooks" layoutX="338.0" layoutY="125.0" prefHeight="259.0" prefWidth="264.0">
+        <columns>
+            <TableColumn fx:id="ISBNCol" editable="false" prefWidth="70.4000244140625" resizable="false" text="ISBN" />
+            <TableColumn fx:id="titleCol" editable="false" prefWidth="112.5999755859375" resizable="false" text="Title" />
+            <TableColumn fx:id="bookQuantity" editable="false" prefWidth="80.20001220703125" resizable="false" text="Quantity" />
+        </columns>
+      </TableView>
+      <Label layoutX="87.0" layoutY="93.0" text="Top 5 Customers">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="379.0" layoutY="93.0" text="Top 10 selling books">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="272.0" layoutY="14.0" text="Total Sales">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <Label fx:id="totalSales" layoutX="310.0" layoutY="44.0" text="0" textAlignment="CENTER">
+         <font>
+            <Font size="22.0" />
+         </font></Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="408.0" prefWidth="943.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainController">
+    <children>
+        <Label fx:id="welcomeLabel" layoutX="14.0" layoutY="14.0" prefHeight="18.0" prefWidth="590.0" text="Hello" />
+        <TextField fx:id="bookNameText" layoutX="328.0" layoutY="40.0" prefHeight="26.0" prefWidth="115.0" promptText="Book Name" />
+        <TextField fx:id="publisherNameText" layoutX="553.0" layoutY="40.0" prefHeight="26.0" prefWidth="115.0" promptText="Publisher Name" />
+        <ComboBox fx:id="categoryComboBox" layoutX="676.0" layoutY="40.0" prefHeight="26.0" prefWidth="115.0" promptText="Category" />
+        <TextField fx:id="yearText" layoutX="458.0" layoutY="40.0" prefHeight="26.0" prefWidth="84.0" promptText="Year" />
+        <Button layoutX="804.0" layoutY="40.0" mnemonicParsing="false" onAction="#search" prefHeight="26.0" prefWidth="128.0" text="Search" />
+        <TextField fx:id="ISBNText" layoutX="17.0" layoutY="40.0" prefHeight="26.0" prefWidth="147.0" promptText="ISBN" />
+        <TableView fx:id="searchTable" layoutX="14.0" layoutY="82.0" prefHeight="275.0" prefWidth="917.0">
+            <columns>
+                <TableColumn fx:id="ISBNCol" editable="false" prefWidth="118.39999103546143" text="ISBN" />
+                <TableColumn fx:id="titleCol" editable="false" prefWidth="127.99995422363281" text="Title" />
+                <TableColumn fx:id="authorCol" editable="false" prefWidth="121.5999755859375" text="Author" />
+                <TableColumn fx:id="publisherCol" editable="false" prefWidth="116.800048828125" text="Publisher" />
+                <TableColumn fx:id="yearCol" editable="false" prefWidth="96.0" text="Year" />
+                <TableColumn fx:id="priceCol" editable="false" prefWidth="97.59991455078125" text="Price" />
+                <TableColumn fx:id="categoryCol" editable="false" prefWidth="116.7999267578125" text="Category" />
+                <TableColumn fx:id="copiesCol" editable="false" prefWidth="143.2000732421875" text="Copies" />
+            </columns>
+        </TableView>
+        <TextField fx:id="authorNameText" layoutX="170.0" layoutY="40.0" prefHeight="26.0" prefWidth="154.0" promptText="Author Name" />
+        <Button id="addToCart" fx:id="addToCart" disable="true" layoutX="14.0" layoutY="369.0" mnemonicParsing="false" onAction="#addToCart" prefHeight="26.0" prefWidth="102.0" text="Add to Cart" />
+        <Button layoutX="127.0" layoutY="369.0" mnemonicParsing="false" onAction="#openCart" prefHeight="26.0" prefWidth="139.0" text="Manage Cart" />
+        <Button layoutX="804.0" layoutY="368.0" mnemonicParsing="false" onAction="#logout" prefHeight="26.0" prefWidth="128.0" text="Log out" />
+      <Button id="modifyBook" fx:id="modifyBook" disable="true" layoutX="279.0" layoutY="368.0" mnemonicParsing="false" onAction="#onModifyBookClick" text="Modify Book" wrapText="true" />
+      <Button fx:id="orders" layoutX="532.0" layoutY="368.0" mnemonicParsing="false" onAction="#onOrdersClick" prefHeight="13.0" prefWidth="65.0" text="Orders" />
+        <Button id="addbook" fx:id="addbook" layoutX="394.0" layoutY="368.0" mnemonicParsing="false" onAction="#onAddBookClick" prefHeight="31.0" prefWidth="128.0" text="Add New Book " />
+      <Button layoutX="676.0" layoutY="368.0" mnemonicParsing="false" onAction="#reportOnClick" prefHeight="26.0" prefWidth="115.0" text="Reports" />
+    </children>
+</AnchorPane>

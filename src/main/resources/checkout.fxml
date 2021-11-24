@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="155.0" prefWidth="242.0" xmlns="http://javafx.com/javafx/16"
+            fx:controller="CheckoutController">
+   <children>
+      <Button layoutX="42.0" layoutY="100.0" mnemonicParsing="false" onAction="#checkout" text="Checkout"/>
+      <TextField fx:id="cardText" layoutX="30.0" layoutY="24.0" prefHeight="26.0" prefWidth="176.0"
+                 promptText="Visa Card"/>
+      <Button layoutX="132.0" layoutY="99.0" mnemonicParsing="false" onAction="#cancel" prefHeight="26.0"
+              prefWidth="66.0" text="Cancel"/>
+      <TextField fx:id="expiryDateText" layoutX="30.0" layoutY="64.0" prefHeight="26.0" prefWidth="176.0"
+                 promptText="Expiry Date"/>
+   </children>
+</AnchorPane>
